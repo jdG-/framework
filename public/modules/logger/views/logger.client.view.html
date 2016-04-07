@@ -1,0 +1,23 @@
+<section data-ng-controller="LoggerController as showCase">
+    <div class="page-header">
+        <h1 translate>Logger</h1>
+    </div>
+    <div class="list-group">
+        <table datatable="ng" class="row-border hover" dt-options="showCase.dtOptions">
+            <thead>
+            <tr>
+                <th translate>Date</th>
+                <th translate>User</th>
+                <th translate>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="log in showCase.logs">
+                <td>{{log.created | date:'medium'}}</td>
+                <td>{{log.user.username}}</td>
+                <td>{{log.action}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

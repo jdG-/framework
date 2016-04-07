@@ -1,0 +1,31 @@
+<section data-ng-controller="DirectoryController as showCase">
+    <div class="page-header">
+        <h1 translate>Directory</h1>
+    </div>
+    <div class="list-group">
+        <table datatable="ng" class="row-border hover" dt-options="showCase.dtOptions">
+            <thead>
+            <tr>
+                <th translate>Picture</th>
+                <th translate>First name</th>
+                <th translate>Last name</th>
+                <th translate>Username</th>
+                <th translate>Phone number</th>
+                <th translate>Year</th>
+                <th translate>Month</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="student in showCase.students">
+                <td><img class="circular" src="{{student.picture}}"></img></td>
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.username}}</td>
+                <td>{{student.phoneNumber}}</td>
+                <td>{{student.year}}</td>
+                <td>{{student.month}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
